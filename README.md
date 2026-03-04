@@ -1,6 +1,6 @@
 # 🚀 Hi, I'm Xi Chen
 
-**Incoming AI Graduate @ University of Adeladie | Ex-Baidu Intern**
+**Incoming AI Graduate @ University of Adelaide | Ex-Baidu Intern**
 
 I am a software engineer passionate about bridging the gap between **Cloud Infrastructure** and **Artificial Intelligence**. With a background in developing high-availability cloud phone systems at **Baidu**, I am now focusing on building scalable AI applications.
 
@@ -26,7 +26,7 @@ I am a software engineer passionate about bridging the gap between **Cloud Infra
 ---
 
 ### 📈 GitHub Stats
-![Your Top Langs](https://github.com/citizen204/rent-tracker)
+![Your Top Langs](https://github-readme-stats.vercel.app/api?username=citizen204&show_icons=true&theme=vision-friendly-dark))
 ![Your GitHub Stats](https://github.com/citizen204/vibe-lens)
 
 ---

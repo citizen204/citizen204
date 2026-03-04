@@ -1,16 +1,35 @@
-## Hi there 👋
+# 🚀 Hi, I'm Xi Chen
 
-<!--
-**citizen204/citizen204** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+**Incoming AI Graduate @ University of Adeladie | Ex-Baidu Intern**
 
-Here are some ideas to get you started:
+I am a software engineer passionate about bridging the gap between **Cloud Infrastructure** and **Artificial Intelligence**. With a background in developing high-availability cloud phone systems at **Baidu**, I am now focusing on building scalable AI applications.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+### 🛠 Technical Stack
+
+- **Languages:** Python (Deep Learning focus), TypeScript, Golang, SQL
+- **AI/ML:** PyTorch, LangChain (RAG), OpenCV, Hugging Face
+- **Cloud/DevOps:** AWS (EC2/S3), Docker, Kubernetes, CI/CD Actions
+- **Front-end:** React, Next.js, H5 Optimization (Performance Focused)
+
+---
+
+### 🏢 Professional Experience (Highlight)
+
+#### **Baidu (Guangzhou Duling Technology) | Front-end & System Intern**
+*Role: Cloud Phone Product Optimization*
+- **Scalability:** Refactored static documentation into a cross-platform (PC/Android/H5) configurable back-end system, reducing deployment cycles.
+- **Security:** Implemented advanced verification mechanisms for high-risk cloud phone operations, significantly enhancing user data safety.
+- **UX/DX:** Designed task termination workflows for automation products, improving system controllability.
+
+---
+
+### 📈 GitHub Stats
+![Your Top Langs](https://github.com/citizen204/rent-tracker)
+![Your GitHub Stats](https://github.com/citizen204/vibe-lens)
+
+---
+
+### 📫 Connect with me:
+[LinkedIn](www.linkedin.com/in/曦-陈-926169338) | [Email](cxi9371@outlook.com) | 

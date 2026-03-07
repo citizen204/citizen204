@@ -56,4 +56,4 @@ An experimental framework merging **Baidu Cloud-Phone** operational patterns wit
 
 ### 📫 Connect with me
 
-[LinkedIn](https://www.linkedin.com/in/曦-陈-926169338) | [Email](mailto:cxi9371@outlook.com)
+[LinkedIn](https://www.linkedin.com/in/xi-chen-dev/) · [Email](mailto:cxi9371@outlook.com)

@@ -6,11 +6,30 @@ I am a software engineer passionate about bridging the gap between **Cloud Infra
 
 ---
 
+### ⭐ Featured Project
+
+**[cloud-ops-ai-agent](https://github.com/citizen204/cloud-ops-ai-agent)** — Async Industrial Execution Engine
+
+An experimental framework merging **Baidu Cloud-Phone** operational patterns with modern async AI agent design. Built as a flagship project to demonstrate production-grade cloud orchestration:
+
+| Feature | Implementation |
+|--------|----------------|
+| **Bounded Concurrency** | `asyncio.Semaphore` for multi-device batch management |
+| **Three-Phase Safety Gateway** | Risk classification → Identity verification → MFA (mirrors Baidu account security) |
+| **Cooperative Task Abort** | `CancellationToken` + `raise_if_cancelled()` at high-frequency checkpoints |
+| **Config-Driven** | Zero hardcoding — all params from `config.json` |
+| **Observability** | TraceID full-chain, Prometheus metrics, AWS S3 log persistence |
+| **AWS Academy** | S3 audit logs with Learner Lab session-token support |
+
+*Python · asyncio · boto3 · Prometheus · CI/CD (pytest, flake8)*
+
+---
+
 ### 🛠 Technical Stack
 
-- **Languages:** Python (Deep Learning focus), TypeScript, Golang, SQL
+- **Languages:** Python (asyncio, Deep Learning), TypeScript, Golang, SQL
 - **AI/ML:** PyTorch, LangChain (RAG), OpenCV, Hugging Face
-- **Cloud/DevOps:** AWS (EC2/S3), Docker, Kubernetes, CI/CD Actions
+- **Cloud/DevOps:** AWS (EC2, S3, STS), Docker, Kubernetes, CI/CD (GitHub Actions)
 - **Front-end:** React, Next.js, H5 Optimization (Performance Focused)
 
 ---
@@ -19,17 +38,22 @@ I am a software engineer passionate about bridging the gap between **Cloud Infra
 
 #### **Baidu (Guangzhou Duling Technology) | Front-end & System Intern**
 *Role: Cloud Phone Product Optimization*
+
 - **Scalability:** Refactored static documentation into a cross-platform (PC/Android/H5) configurable back-end system, reducing deployment cycles.
 - **Security:** Implemented advanced verification mechanisms for high-risk cloud phone operations, significantly enhancing user data safety.
 - **UX/DX:** Designed task termination workflows for automation products, improving system controllability.
 
+*→ These patterns are now codified in [cloud-ops-ai-agent](https://github.com/citizen204/cloud-ops-ai-agent) as a reusable async execution engine.*
+
 ---
 
 ### 📈 GitHub Stats
-![Your Top Langs](https://github-readme-stats.vercel.app/api?username=citizen204&show_icons=true&theme=vision-friendly-dark))
-![Your GitHub Stats](https://github.com/citizen204/vibe-lens)
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=citizen204&show_icons=true&theme=vision-friendly-dark)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=citizen204&layout=compact&theme=vision-friendly-dark)
 
 ---
 
-### 📫 Connect with me:
-[LinkedIn](www.linkedin.com/in/曦-陈-926169338) | [Email](cxi9371@outlook.com) | 
+### 📫 Connect with me
+
+[LinkedIn](https://www.linkedin.com/in/曦-陈-926169338) | [Email](mailto:cxi9371@outlook.com)

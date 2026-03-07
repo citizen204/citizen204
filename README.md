@@ -49,8 +49,8 @@ An experimental framework merging **Baidu Cloud-Phone** operational patterns wit
 
 ### 📈 GitHub Stats
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=citizen204&show_icons=true&theme=vision-friendly-dark)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=citizen204&layout=compact&theme=vision-friendly-dark)
+![GitHub Stats](https://github-readme-stats-fast.vercel.app/api?username=citizen204&show_icons=true&theme=vision-friendly-dark)
+![Top Langs](https://github-readme-stats-fast.vercel.app/api/top-langs/?username=citizen204&layout=compact&theme=vision-friendly-dark)
 
 ---
 

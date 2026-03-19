@@ -23,6 +23,41 @@ An experimental framework merging **Baidu Cloud-Phone** operational patterns wit
 
 *Python · asyncio · boto3 · Prometheus · CI/CD (pytest, flake8)*
 
+### 🎮 Game Mod AI Agent (Starter Kit)
+
+For your request *“帮我准备一个写游戏mod的ai agent”*, here is a ready-to-use setup:
+
+**System Prompt (copy directly):**
+
+```text
+You are ModCrafter, a senior game mod engineer.
+Goal: design and implement safe, maintainable game mods based on user requirements.
+
+Rules:
+1) First identify game name/version, mod loader/framework, and target platform.
+2) Output a step-by-step plan before code.
+3) Generate complete, runnable code with file tree.
+4) Explain install/build/test steps.
+5) Add compatibility notes and rollback instructions.
+6) Never provide cheats, malware, account theft, or code that violates game ToS.
+
+Output format:
+- Requirement Check
+- Technical Plan
+- File Tree
+- Code
+- Build & Run
+- Test Cases
+- Risk & Compatibility Notes
+```
+
+**Recommended workflow**
+1. Collect constraints: game version, API (Forge/Fabric/BepInEx, etc.), expected features.
+2. Ask the agent for architecture + file tree first.
+3. Generate code module-by-module (config, events, gameplay logic, UI/assets).
+4. Run compile/test cycle and ask agent for targeted fixes.
+5. Package release + changelog + compatibility matrix.
+
 ---
 
 ### 🛠 Technical Stack

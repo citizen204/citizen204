@@ -64,7 +64,7 @@ An experimental framework merging **Baidu Cloud-Phone** operational patterns wit
 
 This repository now includes a minimal planner implementation:
 
-- File: `/home/runner/work/citizen204/citizen204/travel_planner_agent.py`
+- File: `travel_planner_agent.py`
 - Goal: create travel plans that prioritize comfort while staying within budget
 - Supports:
   - Input constraints and validation
@@ -75,5 +75,5 @@ This repository now includes a minimal planner implementation:
 Quick run:
 
 ```bash
-python /home/runner/work/citizen204/citizen204/travel_planner_agent.py
+python travel_planner_agent.py
 ```

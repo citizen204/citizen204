@@ -86,5 +86,5 @@ python travel_planner_agent.py --mcp
 
 MCP tool exposed:
 
-- `plan_travel(input: str) -> str`
+- `plan_travel(input_json: str) -> str`
 - Input must be a JSON string; output is JSON string.

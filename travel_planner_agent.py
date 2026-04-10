@@ -323,9 +323,9 @@ def process_travel_request(input_text: str) -> str:
 if mcp is not None:
 
     @mcp.tool()
-    def plan_travel(input: str) -> str:
+    def plan_travel(input_json: str) -> str:
         """Generate comfort-first, budget-aware travel plans from JSON input, with optional replanning events."""
-        return process_travel_request(input)
+        return process_travel_request(input_json)
 
 
 def _demo_request() -> TravelRequest:

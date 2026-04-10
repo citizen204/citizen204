@@ -324,7 +324,7 @@ if mcp is not None:
 
     @mcp.tool()
     def plan_travel(input: str) -> str:
-        """根据行程输入生成舒适度优先且预算可控的旅行计划，支持重规划事件。"""
+        """Generate comfort-first, budget-aware travel plans from JSON input, with optional replanning events."""
         return process_travel_request(input)
 
 

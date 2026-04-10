@@ -57,3 +57,23 @@ An experimental framework merging **Baidu Cloud-Phone** operational patterns wit
 ### 📫 Connect with me
 
 [LinkedIn](https://www.linkedin.com/in/xi-chen-dev/) · [Email](mailto:cxi9371@outlook.com)
+
+---
+
+### 🧭 Travel Planner Agent (Budget + Comfort)
+
+This repository now includes a minimal planner implementation:
+
+- File: `/home/runner/work/citizen204/citizen204/travel_planner_agent.py`
+- Goal: create travel plans that prioritize comfort while staying within budget
+- Supports:
+  - Input constraints and validation
+  - Budget-comfort dual-objective planning
+  - Multi-option output (economy comfort / balanced / premium comfort)
+  - Dynamic replanning for budget/weather/cancellation events
+
+Quick run:
+
+```bash
+python /home/runner/work/citizen204/citizen204/travel_planner_agent.py
+```

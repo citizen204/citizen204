@@ -111,7 +111,7 @@ class TravelPlannerAgent:
 
         budget = self._allocate_budget(req.total_budget, level)
         transport = self._choose_transport(req, profile)
-        hotel = self._choose_hotel(req, comfort_floor_stars, budget["hotel"])
+        hotel = self._choose_hotel(req, comfort_floor_stars, budget["hotel"]["estimated"])
         itinerary = self._generate_daily_timeline(req, profile)
 
         total_estimated = sum(bucket["estimated"] for bucket in budget.values())

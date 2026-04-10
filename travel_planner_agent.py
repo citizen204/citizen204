@@ -294,7 +294,7 @@ def _request_from_dict(payload: Dict[str, Any]) -> TravelRequest:
     )
 
 
-def your_existing_logic(input_text: str) -> str:
+def process_travel_request(input_text: str) -> str:
     payload = json.loads(input_text)
     if not isinstance(payload, dict):
         raise ValueError("input must be a JSON object")
@@ -323,9 +323,9 @@ def your_existing_logic(input_text: str) -> str:
 if mcp is not None:
 
     @mcp.tool()
-    def my_agent_function(input: str) -> str:
+    def plan_travel(input: str) -> str:
         """根据行程输入生成舒适度优先且预算可控的旅行计划，支持重规划事件。"""
-        return your_existing_logic(input)
+        return process_travel_request(input)
 
 
 def _demo_request() -> TravelRequest:

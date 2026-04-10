@@ -77,3 +77,14 @@ Quick run:
 ```bash
 python travel_planner_agent.py
 ```
+
+Run as MCP tool server:
+
+```bash
+python travel_planner_agent.py --mcp
+```
+
+MCP tool exposed:
+
+- `my_agent_function(input: str) -> str`
+- Input must be a JSON string; output is JSON string.

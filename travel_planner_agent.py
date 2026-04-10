@@ -1,9 +1,18 @@
 from __future__ import annotations
 
+import json
+import sys
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Literal
 
 ComfortLevel = Literal["economy_comfort", "balanced", "premium_comfort"]
+
+try:
+    from mcp.server.fastmcp import FastMCP
+except ImportError:  # pragma: no cover - optional runtime dependency
+    FastMCP = None  # type: ignore[assignment]
+
+mcp = FastMCP("travel-planner-agent") if FastMCP is not None else None
 
 
 @dataclass
@@ -263,9 +272,64 @@ class TravelPlannerAgent:
         return options
 
 
-if __name__ == "__main__":
+def _request_from_dict(payload: Dict[str, Any]) -> TravelRequest:
+    comfort_payload = payload.get("comfort")
+    if not isinstance(comfort_payload, dict):
+        raise ValueError("comfort must be an object")
+
+    return TravelRequest(
+        destination=str(payload.get("destination", "")),
+        origin=str(payload.get("origin", "")),
+        days=int(payload.get("days", 0)),
+        travelers=int(payload.get("travelers", 0)),
+        total_budget=float(payload.get("total_budget", 0)),
+        comfort=ComfortPreference(
+            max_flight_hours=float(comfort_payload.get("max_flight_hours", 0)),
+            allow_red_eye=bool(comfort_payload.get("allow_red_eye", False)),
+            max_transfers=int(comfort_payload.get("max_transfers", 0)),
+            hotel_stars_min=int(comfort_payload.get("hotel_stars_min", 0)),
+            daily_pace=str(comfort_payload.get("daily_pace", "moderate")),  # type: ignore[arg-type]
+            food_requirements=list(comfort_payload.get("food_requirements", [])),
+        ),
+    )
+
+
+def your_existing_logic(input_text: str) -> str:
+    payload = json.loads(input_text)
+    if not isinstance(payload, dict):
+        raise ValueError("input must be a JSON object")
+
+    request_payload = payload.get("request", payload)
+    if not isinstance(request_payload, dict):
+        raise ValueError("request must be a JSON object")
+
     planner = TravelPlannerAgent()
-    request = TravelRequest(
+    request = _request_from_dict(request_payload)
+
+    if "event" in payload:
+        event = payload.get("event")
+        if not isinstance(event, dict):
+            raise ValueError("event must be a JSON object")
+        current_plan = payload.get("current_plan", {})
+        if not isinstance(current_plan, dict):
+            raise ValueError("current_plan must be a JSON object")
+        result = planner.replan(request, current_plan, event)
+    else:
+        result = planner.create_plan_options(request)
+
+    return json.dumps(result, ensure_ascii=False)
+
+
+if mcp is not None:
+
+    @mcp.tool()
+    def my_agent_function(input: str) -> str:
+        """根据行程输入生成舒适度优先且预算可控的旅行计划，支持重规划事件。"""
+        return your_existing_logic(input)
+
+
+def _demo_request() -> TravelRequest:
+    return TravelRequest(
         destination="东京",
         origin="上海",
         days=5,
@@ -280,7 +344,14 @@ if __name__ == "__main__":
             food_requirements=["海鲜过敏", "少辣"],
         ),
     )
-    import json
 
-    plan = planner.create_plan_options(request)
-    print(json.dumps(plan, ensure_ascii=False, indent=2))
+
+if __name__ == "__main__":
+    if len(sys.argv) > 1 and sys.argv[1] == "--mcp":
+        if mcp is None:
+            raise SystemExit("MCP runtime not available. Please install package: mcp")
+        mcp.run()
+    else:
+        planner = TravelPlannerAgent()
+        plan = planner.create_plan_options(_demo_request())
+        print(json.dumps(plan, ensure_ascii=False, indent=2))
